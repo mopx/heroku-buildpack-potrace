@@ -15,5 +15,7 @@ mkdir -p vendor/potrace
 # untar the binary to the directory we want
 tar -C vendor/potrace -xvf potrace-1.1.linux-amd64.tar.gz
 
-PATH=/app/vendor/potrace/potrace-1.1.linux-amd64/:$PATH
-export PATH
+mkdir -p $BUILD_DIR/.profile.d
+cat <<EOF >$BUILD_DIR/.profile.d/000_potrace.sh
+export PATH="/app/vendor/potrace/potrace-1.1.linux-amd64/:$PATH"
+EOF
