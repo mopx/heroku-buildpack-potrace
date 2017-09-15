@@ -4,6 +4,5 @@
 cat <<EOF
 ---
 config_vars:
-  PATH: bin:/usr/local/bin:/usr/bin:/bin
-
+  PATH: $PATH:/app/vendor/potrace/potrace-1.15.linux-x86_64
 EOF
